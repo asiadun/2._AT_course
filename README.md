@@ -18,12 +18,12 @@ or perform the command to install all components based on configuration:
 ```
 pip install -r requirements.txt
 ```
-###  For running tests use the following command
+###  Running tests use the following command
 ```
 py.test --alluredir=allure-results -s -q
 ```
 
-###  For report generation
+###  Report generation
 ```
 allure serve allure-results
 ```
