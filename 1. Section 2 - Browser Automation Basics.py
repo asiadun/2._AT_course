@@ -1,25 +1,18 @@
-import pytest
 from selenium import webdriver
 
 browser = webdriver.Chrome()
-
+#Given: Usr on the following page
 browser.get("http://techstepacademy.com/training-ground")
 
+# When: Find text field and input "Test text" text into it
 input2_css_locator = "input[id='ipt2']"
 button4_xpath_locator = "//button[@id='b4']"
 
 #Assign elements
-def Test_1(self):
-    input1_elem = browser.find_element_by_css_selector(input2_css_locator)
-    input1_elem.send_keys("Test text")
-    assert True
-    assert input1_elem == input2_css_locator
-    assert input1_elem == "ipt2"
-
-def Test_2():
-    butn4_elem = browser.find_element_by_xpath(button4_xpath_locator)
-    butn4_elem.click()
-    assert True
-    assert butn4_elem == "//button[@id='b4']"
-
-# Manipulate elements
+element = browser.find_element_by_id('ipt2') #this element is visible
+assert element == '1'
+# if element.is_displayed():
+#     assert
+#     print "Element found"
+# else:
+# print "Element not found"
